@@ -13,6 +13,7 @@ const HeroContent = () => {
     initial= "hidden"
     animate="visible"
     className='flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]'
+    id="hero"
     >
         <div className='h-full w-full flex flex-col gap-5 justify-center m-auto text-start'>
             <motion.div
@@ -57,15 +58,21 @@ const HeroContent = () => {
 
         </motion.div>
     </motion.div>
+    <motion.div
+    initial="hidden"
+    animate="visible"
+    className="mt-1.5 mx-auto w-1/6  z-30"
+  >
     <motion.a
-  variants={slideInFromLeft(1)}
-  href="https://www.ozzycf.co.uk/" // Add the URL here
-  target="_blank" // Open in a new tab
-  rel="noopener noreferrer" // For security purposes
-  className='py-3 px-6 button-primary text-center text-white cursor-pointer rounded-lg mx-auto block w-1/6 mt-1.5' // Centered and bigger
+  variants={slideInFromLeft(2)}
+  href="https://www.ozzycf.co.uk/" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className='py-3 px-6 button-primary text-center text-white cursor-pointer rounded-lg mx-auto block  mt-1.5' // Centered and bigger
 >
   Learn More!
 </motion.a>
+</motion.div>
     </>
   )
 }
