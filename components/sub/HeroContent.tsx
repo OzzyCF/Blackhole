@@ -8,6 +8,7 @@ import Image from 'next/image'
 
 const HeroContent = () => {
   return (
+    <>
     <motion.div
     initial= "hidden"
     animate="visible"
@@ -16,11 +17,11 @@ const HeroContent = () => {
         <div className='h-full w-full flex flex-col gap-5 justify-center m-auto text-start'>
             <motion.div
             variants={slideInFromTop}
-            className='Welcome-box py-[15px] px-[25px] border border-[#7042f88b] opacity-0.9'
+            className='Welcome-box py-[15px] px-[25px] border border-[#7042f88b] opacity-0.5'
             >
                 <SparklesIcon className='text-[#b49bff] mr-[10px] h-5 w-5'/>
-                <h1 className='Welcome-text text-[13px]'>
-                    FrontEnd Developer Portfolio Project
+                <h1 className='Welcome-text text-[18px]'>
+                    FrontEnd Developer NextJS Project
                     </h1>
             </motion.div>
             <motion.div
@@ -29,7 +30,7 @@ const HeroContent = () => {
             >
                 <span>
                 Providing 
-                <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500'> the best </span>
+                <span className='text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-600'> the best </span>
                 project experience</span>
             </motion.div>
 
@@ -40,12 +41,7 @@ const HeroContent = () => {
                 I&apos;m a FrontEnd Developer with experience in Websites and 
                 Mobile applications, specialized in Graphic design, UI/UX.<br></br> Check my portfolio website for other projects and skills. 
             </motion.p>
-            <motion.a
-            variants={slideInFromLeft(1)}
-            className='py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]'
-            >
-                Learn More!
-            </motion.a>
+           
         </div>
 
         <motion.div
@@ -61,6 +57,16 @@ const HeroContent = () => {
 
         </motion.div>
     </motion.div>
+    <motion.a
+  variants={slideInFromLeft(1)}
+  href="https://www.ozzycf.co.uk/" // Add the URL here
+  target="_blank" // Open in a new tab
+  rel="noopener noreferrer" // For security purposes
+  className='py-3 px-6 button-primary text-center text-white cursor-pointer rounded-lg mx-auto block w-1/6 mt-1.5' // Centered and bigger
+>
+  Learn More!
+</motion.a>
+    </>
   )
 }
 
