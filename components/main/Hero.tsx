@@ -1,20 +1,22 @@
-import React from 'react'
-import HeroContent from '../sub/HeroContent'
+import React from 'react';
+import HeroContent from '../sub/HeroContent';
 
 const Hero = () => {
   return (
-    <div className='relative flex flex-col h-full w-full'>
+    <div className='relative flex flex-col h-full w-full overflow-hidden'>
         <video
-        autoPlay
-        muted
-        loop
-        className='rotate-180 absolute top-[-340px] left-1/2 transform -translate-x-1/2 z-[1] h-full object-cover' 
+          autoPlay
+          muted
+          loop
+          className='rotate-180 absolute z-[1] object-cover
+                     md:top-0 md:left-1/2 md:transform md:-translate-x-1/2 md:w-full md:h-auto
+                     lg:top-[-390px] lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:w-auto lg:h-auto'
         >
-            <source src='/blackhole.webm' type='video/webm'/>
+          <source src='/blackhole.webm' type='video/webm'/>
         </video>
-        <HeroContent  />
+        <HeroContent />
     </div>
   )
 }
 
-export default Hero
+export default Hero;
